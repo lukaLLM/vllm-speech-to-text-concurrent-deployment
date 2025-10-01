@@ -146,7 +146,3 @@ curl http://localhost:8002/v1/models
 - [VLLM Issue #2492](https://github.com/vllm-project/vllm/issues/2492) - Audio configuration reference
 - [VLLM Optimization Guide](https://docs.vllm.ai/en/stable/configuration/optimization.html)
 - [OpenAI Audio API](https://platform.openai.com/docs/api-reference/audio)
-
-## 📄 License
-
-[Add your license here]
