@@ -85,26 +85,22 @@ curl -X POST "http://localhost:8002/v1/audio/transcriptions" \
     -F "language=en" \
     -F "response_format=json"
 ```
-
 #### Which audio to use?
-Frequency
+
+### Frequency
 A sample rate of 16 kHz is typically sufficient for speech transcription, as it covers the core frequency range of human voice
 
-Format Options
+### Format Options
+- **WAV (Uncompressed):** Preserves all audio details, resulting in the highest transcription quality but with the largest file size.
+- **FLAC (Lossless Compression):** Reduces file size significantly without losing audio quality, maintaining optimal transcription potential.
+- **MP3 (Lossy Compression):** Discards some audio data to reduce size, which can lower transcription accuracy by introducing artifacts.
 
-WAV (Uncompressed): Preserves all audio details, resulting in the highest transcription quality but with the largest file size.
-
-FLAC (Lossless Compression): Reduces file size significantly without losing audio quality, maintaining optimal transcription potential.
-
-MP3 (Lossy Compression): Discards some audio data to reduce size, which can lower transcription accuracy by introducing artifacts.
-
-Channels
-
+### Channels
 Check that your chosen audio format and channel configuration is supported by the transcription model. While mono (single-channel) audio is standard and widely supported, some advanced models and APIs allow multichannel transcription for speaker separation; however, channel count may affect accuracy and model compatibility.
 
-Network Delay
-
+### Network Delay
 Larger audio files—such as uncompressed WAV—may introduce delays when uploading or streaming over networks. If bandwidth is a concern, consider FLAC for lossless compression to balance quality and transfer speed.
+
 
 #### Simple Batch Processing Alternative
 
